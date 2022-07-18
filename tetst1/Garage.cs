@@ -16,6 +16,5 @@ public class Garage
         carArray[2] = new Car("Andy", 45);
         carArray[3] = new Car("Rsty", 29);
 
-
     }
 }
