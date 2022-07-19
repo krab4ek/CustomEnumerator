@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace CustomEnumerator;
 
-public class Garage
+public class Garage:IEnumerator
 {
     private Car[] carArray = new Car[4];
     public Garage()
@@ -16,5 +17,22 @@ public class Garage
         carArray[2] = new Car("Andy", 45);
         carArray[3] = new Car("Rsty", 29);
 
+    }
+
+    public object Current => throw new NotImplementedException();
+
+    public IEnumerator GetEnumerator()
+    {
+        return carArray.GetEnumerator();
+    }
+
+    public bool MoveNext()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Reset()
+    {
+        throw new NotImplementedException();
     }
 }
